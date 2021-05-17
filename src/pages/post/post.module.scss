@@ -60,9 +60,21 @@
     }
   }
 
+  .lastEdited {
+    line-height: 2rem;
+    font-size: 0.875rem;
+    margin-left: 0.5rem;
+
+    font-style: italic;
+    color: var(--info);
+  }
+
   .postContent {
     max-width: 1120px;
     margin: 2rem auto;
+    padding-bottom: 4rem;
+
+    border-bottom: 1px solid var(--body);
 
     h2 {
       font-weight: 600;
@@ -94,6 +106,40 @@
           margin: 0.5rem 0;
         }
       }
+    }
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      padding: 3rem auto;
+
+      h5 {
+        font-size: 1.125rem;
+        font-weight: 400;
+        color: var(--heading);
+
+        margin-bottom: 1rem;
+      }
+
+      a {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--highlight);
+
+        transition: filter 0.2s;
+
+        &:hover {
+          filter: brightness(0.7);
+        }
+      }
+    }
+
+    div + div {
+      text-align: right;
     }
   }
 }
