@@ -3,7 +3,7 @@
   position: relative;
   margin: 0 auto;
   background: var(--banner-background);
-  max-width: 1440px;
+  // max-width: 1440px;
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -24,7 +24,7 @@
   display: block;
 
   h1 {
-    width: 1440px;
+    width: 100%;
     margin: 2rem 0 auto;
     font-family: Inter;
     font-style: normal;
@@ -115,22 +115,26 @@
     justify-content: space-between;
 
     div {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
       padding: 3rem auto;
 
-      h5 {
-        font-size: 1.125rem;
-        font-weight: 400;
-        color: var(--heading);
-
-        margin-bottom: 1rem;
-      }
-
       a {
-        font-size: 1rem;
-        font-weight: 600;
-        color: var(--highlight);
-
         transition: filter 0.2s;
+
+        h5 {
+          font-size: 1.125rem;
+          font-weight: 400;
+          color: var(--heading);
+
+          margin-bottom: 1rem;
+        }
+
+        span {
+          font-size: 1rem;
+          font-weight: 600;
+          color: var(--highlight);
+        }
 
         &:hover {
           filter: brightness(0.7);

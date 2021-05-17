@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import { Fragment } from 'react';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
@@ -194,23 +193,23 @@ export default function Post({
         <section className={`${styles.navigation} ${commonStyles.container}`}>
           <div>
             {previousPost && (
-              <>
-                <h5>{previousPost.data.title}</h5>
-                <Link href={`/post/${previousPost.uid}`}>
-                  <a>Post anterior</a>
-                </Link>
-              </>
+              <Link href={`/post/${previousPost.uid}`}>
+                <a>
+                  <h5>{previousPost.data.title}</h5>
+                  <span>Post anterior</span>
+                </a>
+              </Link>
             )}
           </div>
 
           <div>
             {nextPost && (
-              <>
-                <h5>{nextPost.data.title}</h5>
-                <Link href={`/post/${nextPost.uid}`}>
-                  <a>Próximo post</a>
-                </Link>
-              </>
+              <Link href={`/post/${nextPost.uid}`}>
+                <a>
+                  <h5>{nextPost.data.title}</h5>
+                  <span>Próximo post</span>
+                </a>
+              </Link>
             )}
           </div>
         </section>
